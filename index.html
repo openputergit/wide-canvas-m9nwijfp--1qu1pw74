@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEEV: Compassionate Home Care Services | One World, Better Health</title>
+    <meta name="description" content="JEEV provides professional and compassionate home care services. Trusted elderly care, post-surgery care, and disability care services you can rely on.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&q=80') center/cover;
+        }
+        .nav-link.active {
+            border-bottom: 2px solid #3B82F6;
+        }
+        .review-stars {
+            color: #FFD700;
+        }
+        .testimonial-card {
+            transition: transform 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        .service-card {
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-bottom: 3px solid #3B82F6;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-blue-600">JEEV</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link active text-gray-700 hover:text-blue-600 transition">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-blue-600 transition">About</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-blue-600 transition">Services</a>
+                    <a href="#testimonials" class="nav-link text-gray-700 hover:text-blue-600 transition">Testimonials</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 transition">Contact</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <button onclick="toggleLogin()" class="px-4 py-2 text-blue-600 hover:text-blue-800 transition">Login</button>
+                    <button onclick="toggleSignup()" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Sign Up</button>
+                </div>
+                <button class="md:hidden" onclick="toggleMenu()">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white pb-4">
+            <a href="#home" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Home</a>
+            <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About</a>
+            <a href="#services" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Services</a>
+            <a href="#testimonials" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Testimonials</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact</a>
+            <div class="mt-3 px-4 flex gap-2">
+                <button onclick="toggleLogin()" class="w-1/2 px-4 py-2 text-blue-600 border border-blue-600 rounded hover:bg-blue-50 transition">Login</button>
+                <button onclick="toggleSignup()" class="w-1/2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Sign Up</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section min-h-screen flex items-center justify-center text-white">
+        <div class="text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">One World, Better Health</h1>
+            <p class="text-xl md:text-2xl mb-8">Compassionate Home Care Services You Can Trust</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button onclick="scrollToServices()" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition">
+                    Explore Our Services
+                </button>
+                <button onclick="scrollToContact()" class="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition">
+                    Request Consultation
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">About JEEV</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-2"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Our Mission & Vision</h3>
+                    <p class="text-gray-700 mb-4">JEEV was founded with a simple yet powerful vision: to provide compassionate, high-quality home care that empowers individuals to live dignified, independent lives in the comfort of their own homes.</p>
+                    <p class="text-gray-700 mb-4">Our mission is to deliver personalized care plans that address the unique needs of each client, combining professional expertise with genuine empathy and respect.</p>
+                    <div class="mt-8">
+                        <h4 class="text-xl font-semibold mb-3">Our Values</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="bi bi-check-circle-fill text-blue-600 mr-2"></i>
+                                <span>Compassion in every interaction</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check-circle-fill text-blue-600 mr-2"></i>
+                                <span>Professional excellence in care delivery</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check-circle-fill text-blue-600 mr-2"></i>
+                                <span>Respect for cultural diversity and personal dignity</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="bi bi-check-circle-fill text-blue-600 mr-2"></i>
+                                <span>Integrity and transparency in all services</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="relative h-96 overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&q=80" alt="JEEV Care Team" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                        <div class="p-6 text-white">
+                            <h4 class="text-xl font-semibold">Experts in Home Care</h4>
+                            <p>Our team brings years of specialized training and experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 bg-blue-50 p-8 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-6 text-center">Why Choose JEEV?</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="text-center p-4">
+                        <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i class="bi bi-people-fill text-2xl text-blue-600"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Experienced Caregivers</h4>
+                        <p class="text-sm text-gray-600">Thoroughly vetted, trained professionals who truly care</p>
+                    </div>
+                    <div class="text-center p-4">
+                        <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i class="bi bi-clipboard2-check-fill text-2xl text-blue-600"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Personalized Care Plans</h4>
+                        <p class="text-sm text-gray-600">Custom solutions designed around your unique needs</p>
+                    </div>
+                    <div class="text-center p-4">
+                        <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i class="bi bi-clock-fill text-2xl text-blue-600"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">24/7 Support</h4>
+                        <p class="text-sm text-gray-600">Round-the-clock assistance whenever you need us</p>
+                    </div>
+                    <div class="text-center p-4">
+                        <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i class="bi bi-heart-pulse-fill text-2xl text-blue-600"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Holistic Care Approach</h4>
+                        <p class="text-sm text-gray-600">Addressing physical, emotional, and social wellbeing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">Our Services</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-2"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">We offer comprehensive home care solutions tailored to your unique needs, delivered with compassion and professionalism.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Cards -->
+                <div class="service-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-600 mb-4">
+                        <i class="bi bi-heart-pulse text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Elderly Care</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive companion care, personal assistance, and medication management for seniors who wish to maintain their independence while receiving the support they need.</p>
+                    <ul class="text-sm text-gray-600 mb-4 space-y-1">
+                        <li class="flex items-start">
+                            <i class="bi bi-check2 text-blue-600 mr-2 mt-1"></i>
+                            <span>Personal hygiene assistance</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="bi bi-check2 text-blue-600 mr-2 mt-1"></i>
+                            <span>Medication reminders</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="bi bi-check2 text-blue-600 mr-2 mt-1"></i>
+                            <span>Companionship and emotional support</span>
+                        </li>
+                    </ul>
+                    <button onclick="showServiceDetails('elderly-care')" class="text-blue-600 hover:text-blue-800 font-medium flex items-center transition">
+                        Learn More
+                        <i class="bi bi-arrow-right ml-1"></i>
+                    </button>
+                </div>
+                
+                <div class="service-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-600 mb-4">
+                        <i class="bi bi-bandaid text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Post-Surgery Care</h3>
+                    <p class="text-gray-600 mb-4">Professional support during recovery periods after hospital discharge, ensuring proper healing and reducing readmission risks.</p>
+                    <ul class="text-sm text-gray-600 mb-4 space-y-1">
+                        <li class="flex items-start">
+                            <i class="bi bi-check2 text-blue-600 mr-2 mt-1"></i>
+                            <span>Wound care assistance</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="bi bi-check2 text-blue-600 mr-2 mt-1"></i>
+                            <span>Mobility support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="bi bi-check2 text-blue-600 mr-2 mt-1"></i>
+                            <span>Medication administration</span>
+                        </li>
+                    </ul>
+                    <button onclick="showServiceDetails('post-surgery-care')" class="text-blue-600 hover:text-blue-800 font-medium flex items-center transition">
+                        Learn More
+                        <i class="bi bi-arrow-right ml-1"></i>
+                    </button>
+                </div>
+                
+                <div class="service-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-600 mb-4">
+                        <i class="bi bi-person-arms-up text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Disability Care</h3>
+                    <p class="text-gray-600 mb-4">Specialized assistance for individuals with disabilities, focusing on enhancing independence and quality of life.</p>
+                    <ul class="text-sm text-gray-600 mb-4 space-y-1">
+                        <li class="flex items-start">
+                            <i class="bi bi-check2 text-blue-600 mr-2 mt-1"></i>
+                            <span>Personal care and grooming</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="bi bi-check2 text-blue-600 mr-2 mt-1"></i>
+                            <span>Mobility and transfer assistance</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="bi bi-check2 text-blue-600 mr-2 mt-1"></i>
+                            <span>Community access support</span>
+                        </li>
+                    </ul>
+                    <button onclick="showServiceDetails('disability-care')" class="text-blue-600 hover:text-blue-800 font-medium flex items-center transition">
+                        Learn More
+                        <i class="bi bi-arrow-right ml-1"></i>
+                    </button>
+                </div>
+                
+                <div class="service-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-600 mb-4">
+                        <i class="bi bi-clipboard2-pulse text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Home Nursing</h3>
+                    <p class="text-gray-600 mb-4">Professional nursing services delivered in the comfort of your home by qualified healthcare professionals.</p>
+                    <ul class="text-sm text-gray-600 mb-4 space-y-1">
+                        <li class="flex items-start">
+                            <i class="bi bi-check2 text-blue-600 mr-2 mt-1"></i>
+                            <span>IV therapy and injections</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="bi bi-check2 text-blue-600 mr-2 mt-1"></i>
+                            <span>Vital signs monitoring</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="bi bi-check2 text-blue-600 mr-2 mt-1"></i>
+                            <span>Complex medication management</span>
+                        </li>
+                    </ul>
+                    <button onclick="showServiceDetails('home-nursing')" class="text-blue-600 hover:text-blue-800 font-medium flex items-center transition">
+                        Learn More
+                        <i class="bi bi-arrow-right ml-1"></i>
+                    </button>
+                </div>
+                
+                <div class="service-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-600 mb-4">
+                        <i class="bi bi-flower1 text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Palliative Care</h3>
+                    <p class="text-gray-600 mb-4">Compassionate care focused on providing relief from the symptoms and stress of serious illness, improving quality of life.</p>
+                    <ul class="text-sm text-gray-600 mb-4 space-y-1">
+                        <li class="flex items-start">
+                            <i class="bi bi-check2 text-blue-600 mr-2 mt-1"></i>
+                            <span>Pain management</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="bi bi-check2 text-blue-600 mr-2 mt-1"></i>
+                            <span>Emotional and spiritual support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="bi bi-check2 text-blue-600 mr-2 mt-1"></i>
+                            <span>Family guidance and support</span>
+                        </li>
+                    </ul>
+                    <button onclick="showServiceDetails('palliative-care')" class="text-blue-600 hover:text-blue-800 font-medium flex items-center transition">
+                        Learn More
+                        <i class="bi bi-arrow-right ml-1"></i>
+                    </button>
+                </div>
+                
+                <div class="service-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-600 mb-4">
+                        <i class="bi bi-brain text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Specialized Care</h3>
+                    <p class="text-gray-600 mb-4">Tailored care for specific conditions such as dementia, Parkinson's, and other specialized needs.</p>
+                    <ul class="text-sm text-gray-600 mb-4 space-y-1">
+                        <li class="flex items-start">
+                            <i class="bi bi-check2 text-blue-600 mr-2 mt-1"></i>
+                            <span>Dementia and Alzheimer's care</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="bi bi-check2 text-blue-600 mr-2 mt-1"></i>
+                            <span>Parkinson's disease support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="bi bi-check2 text-blue-600 mr-2 mt-1"></i>
+                            <span>Stroke recovery assistance</span>
+                        </li>
+                    </ul>
+                    <button onclick="showServiceDetails('specialized-care')" class="text-blue-600 hover:text-blue-800 font-medium flex items-center transition">
+                        Learn More
+                        <i class="bi bi-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#contact" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition">
+                    Request a Personalized Care Plan
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">Client Testimonials</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-2"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Read what our clients have to say about our compassionate care services.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial Cards -->
+                <div class="testimonial-card bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="flex mb-4 review-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"The caregivers from JEEV have been a blessing for my father. Their compassion, professionalism, and attention to detail have made a difficult time much easier for our family."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center text-blue-600 font-bold">
+                            SM
+                        </div>
+                        <div class="ml-3">
+                            <h4 class="font-semibold">Sarah M.</h4>
+                            <p class="text-sm text-gray-500">Elderly Care Services</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="flex mb-4 review-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"After my surgery, I was worried about recovery at home. The nursing care from JEEV was exceptional. They were knowledgeable, gentle, and made me feel secure throughout my recovery journey."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center text-blue-600 font-bold">
+                            JD
+                        </div>
+                        <div class="ml-3">
+                            <h4 class="font-semibold">James D.</h4>
+                            <p class="text-sm text-gray-500">Post-Surgery Care</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="flex mb-4 review-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"The disability care services from JEEV have dramatically improved my sister's quality of life. The caregivers are respectful of her independence while providing the support she needs. Truly grateful!"</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center text-blue-600 font-bold">
+                            LP
+                        </div>
+                        <div class="ml-3">
+                            <h4 class="font-semibold">Lisa P.</h4>
+                            <p class="text-sm text-gray-500">Disability Care</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-10 text-center">
+                <button onclick="toggleReviewForm()" class="bg-blue-100 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-200 transition flex items-center mx-auto">
+                    <i class="bi bi-pencil-square mr-2"></i>
+                    Write a Review
+                </button>
+                
+                <a href="#all-reviews" class="inline-block mt-3 text-blue-600 hover:underline">
+                    View All Reviews
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">Contact Us</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-2"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Have questions about our services? Reach out to our friendly team for assistance or to schedule a consultation.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-6">Get in Touch</h3>
+                    <form id="contactForm" class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-gray-700 mb-1">Full Name</label>
+                                <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-gray-700 mb-1">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-1">Email Address</label>
+                            <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        
+                        <div>
+                            <label for="service" class="block text-gray-700 mb-1">Service of Interest</label>
+                            <select id="service" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                <option value="" selected disabled>Select a service</option>
+                                <option value="elderly-care">Elderly Care</option>
+                                <option value="post-surgery-care">Post-Surgery Care</option>
+                                <option value="disability-care">Disability Care</option>
+                                <option value="home-nursing">Home Nursing</option>
+                                <option value="palliative-care">Palliative Care</option>
+                                <option value="specialized-care">Specialized Care</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">
+                            Submit Inquiry
+                        </button>
+                    </form>
+                </div>
+                
+                <div>
+                    <div class="bg-white p-8 rounded-lg shadow-md mb-6">
+                        <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="bi bi-geo-alt text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Our Location</h4>
+                                    <p class="text-gray-600">123 Care Avenue, Suite 200<br>Boston, MA 02110</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="bi bi-telephone text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Phone Number</h4>
+                                    <p class="text-gray-600">(555) 123-4567</p>
+                                    <p class="text-sm text-gray-500">Available 24/7 for emergency assistance</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="bi bi-envelope text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Email Address</h4>
+                                    <p class="text-gray-600">care@jeev-health.com</p>
+                                    <p class="text-sm text-gray-500">We respond within 24 hours</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="bi bi-clock text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Office Hours</h4>
+                                    <p class="text-gray-600">Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 1:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-lg font-semibold mb-4">Service Areas</h3>
+                        <p class="text-gray-600 mb-3">We proudly serve the greater Boston area and surrounding communities:</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">Boston</span>
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">Cambridge</span>
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">Brookline</span>
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">Somerville</span>
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">Newton</span>
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">Quincy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">JEEV</h3>
+                    <p class="text-gray-300 mb-4">One World, Better Health</p>
+                    <p class="text-gray-400 text-sm">JEEV provides compassionate home care services, helping individuals live with dignity and independence in the comfort of their homes.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition">About Us</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition">Our Services</a></li>
+                        <li><a href="#testimonials" class="text-gray-300 hover:text-white transition">Testimonials</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Our Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Elderly Care</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Post-Surgery Care</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Disability Care</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Home Nursing</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Palliative Care</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition"><i class="bi bi-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white transition"><i class="bi bi-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white transition"><i class="bi bi-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white transition"><i class="bi bi-linkedin text-xl"></i></a>
+                    </div>
+                    <p class="text-gray-400 text-sm">Subscribe to our newsletter for updates on home care best practices and JEEV news.</p>
+                    <div class="mt-3 flex">
+                        <input type="email" placeholder="Your email" class="p-2 text-gray-800 rounded-l-lg w-full focus:outline-none">
+                        <button class="bg-blue-600 px-4 py-2 rounded-r-lg hover:bg-blue-700 transition">
+                            <i class="bi bi-send"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2023 JEEV Home Care Services. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 text-sm hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 text-sm hover:text-white transition">Terms of Service</a>
+                    <a href="#" class="text-gray-400 text-sm hover:text-white transition">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+        <div class="bg-white p-8 rounded-lg w-full max-w-md relative">
+            <button onclick="toggleLogin()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <i class="bi bi-x-lg"></i>
+            </button>
+            
+            <h2 class="text-2xl font-bold mb-6">Login to Your Account</h2>
+            
+            <form id="loginForm" class="space-y-4">
+                <div>
+                    <label for="loginEmail" class="block text-gray-700 mb-1">Email Address</label>
+                    <input type="email" id="loginEmail" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                
+                <div>
+                    <label for="loginPassword" class="block text-gray-700 mb-1">Password</label>
+                    <input type="password" id="loginPassword" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <input type="checkbox" id="remember" class="mr-2">
+                        <label for="remember" class="text-sm text-gray-600">Remember me</label>
+                    </div>
+                    <a href="#" class="text-sm text-blue-600 hover:underline">Forgot password?</a>
+                </div>
+                
+                <button type="submit" class="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition">
+                    Login
+                </button>
+            </form>
+            
+            <div class="mt-6 text-center">
+                <p class="text-gray-600">Don't have an account?</p>
+                <button onclick="switchToSignup()" class="mt-2 text-blue-600 hover:underline">Sign Up</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+        <div class="bg-white p-8 rounded-lg w-full max-w-md relative">
+            <button onclick="toggleSignup()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <i class="bi bi-x-lg"></i>
+            </button>
+            
+            <h2 class="text-2xl font-bold mb-6">Create an Account</h2>
+            
+            <form id="signupForm" class="space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label for="firstName" class="block text-gray-700 mb-1">First Name</label>
+                        <input type="text" id="firstName" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+                    
+                    <div>
+                        <label for="lastName" class="block text-gray-700 mb-1">Last Name</label>
+                        <input type="text" id="lastName" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+                </div>
+                
+                <div>
+                    <label for="signupEmail" class="block text-gray-700 mb-1">Email Address</label>
+                    <input type="email" id="signupEmail" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                
+                <div>
+                    <label for="signupPhone" class="block text-gray-700 mb-1">Phone Number</label>
+                    <input type="tel" id="signupPhone" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                
+                <div>
+                    <label for="signupPassword" class="block text-gray-700 mb-1">Password</label>
+                    <input type="password" id="signupPassword" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    <p class="text-xs text-gray-500 mt-1">Password must be at least 8 characters with a number and special character.</p>
+                </div>
+                
+                <div>
+                    <label for="confirmPassword" class="block text-gray-700 mb-1">Confirm Password</label>
+                    <input type="password" id="confirmPassword" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                
+                <div class="flex items-start">
+                    <input type="checkbox" id="terms" class="mt-1 mr-2" required>
+                    <label for="terms" class="text-sm text-gray-600">I agree to the <a href="#" class="text-blue-600 hover:underline">Terms of Service</a> and <a href="#" class="text-blue-600 hover:underline">Privacy Policy</a></label>
+                </div>
+                
+                <button type="submit" class="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition">
+                    Create Account
+                </button>
+            </form>
+            
+            <div class="mt-6 text-center">
+                <p class="text-gray-600">Already have an account?</p>
+                <button onclick="switchToLogin()" class="mt-2 text-blue-600 hover:underline">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review Form Modal -->
+    <div id="reviewModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+        <div class="bg-white p-8 rounded-lg w-full max-w-md relative">
+            <button onclick="toggleReviewForm()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <i class="bi bi-x-lg"></i>
+            </button>
+            
+            <h2 class="text-2xl font-bold mb-6">Share Your Experience</h2>
+            
+            <form id="reviewForm" class="space-y-4">
+                <div>
+                    <label for="reviewName" class="block text-gray-700 mb-1">Your Name</label>
+                    <input type="text" id="reviewName" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                
+                <div>
+                    <label class="block text-gray-700 mb-1">Service Used</label>
+                    <select id="reviewService" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        <option value="" selected disabled>Select a service</option>
+                        <option value="elderly-care">Elderly Care</option>
+                        <option value="post-surgery-care">Post-Surgery Care</option>
+                        <option value="disability-care">Disability Care</option>
+                        <option value="home-nursing">Home Nursing</option>
+                        <option value="palliative-care">Palliative Care</option>
+                        <option value="specialized-care">Specialized Care</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label class="block text-gray-700 mb-1">Your Rating</label>
+                    <div class="flex space-x-2 text-2xl review-rating">
+                        <i class="bi bi-star review-star" data-value="1"></i>
+                        <i class="bi bi-star review-star" data-value="2"></i>
+                        <i class="bi bi-star review-star" data-value="3"></i>
+                        <i class="bi bi-star review-star" data-value="4"></i>
+                        <i class="bi bi-star review-star" data-value="5"></i>
+                    </div>
+                    <input type="hidden" id="ratingValue" value="0" required>
+                </div>
+                
+                <div>
+                    <label for="reviewComment" class="block text-gray-700 mb-1">Your Review</label>
+                    <textarea id="reviewComment" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required placeholder="Share your experience with our services..."></textarea>
+                </div>
+                
+                <button type="submit" class="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition">
+                    Submit Review
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Service Details Modal -->
+    <div id="serviceDetailsModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+        <div class="bg-white p-8 rounded-lg w-full max-w-3xl max-h-[90vh] overflow-y-auto relative">
+            <button onclick="closeServiceDetails()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <i class="bi bi-x-lg"></i>
+            </button>
+            
+            <div id="serviceDetailsContent">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Navigation
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Modal Controls
+        function toggleLogin() {
+            const modal = document.getElementById('loginModal');
+            modal.classList.toggle('hidden');
+            document.getElementById('signupModal').classList.add('hidden');
+        }
+
+        function toggleSignup() {
+            const modal = document.getElementById('signupModal');
+            modal.classList.toggle('hidden');
+            document.getElementById('loginModal').classList.add('hidden');
+        }
+
+        function switchToSignup() {
+            document.getElementById('loginModal').classList.add('hidden');
+            document.getElementById('signupModal').classList.remove('hidden');
+        }
+
+        function switchToLogin() {
+            document.getElementById('signupModal').classList.add('hidden');
+            document.getElementById('loginModal').classList.remove('hidden');
+        }
+
+        function toggleReviewForm() {
+            const modal = document.getElementById('reviewModal');
+            modal.classList.toggle('hidden');
+        }
+
+        // Smooth Scroll
+        function scrollToServices() {
+            document.getElementById('services').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function scrollToContact() {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Form Handling
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Login functionality would be implemented here.');
+            toggleLogin();
+        });
+
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const password = document.getElementById('signupPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+            
+            alert('Account creation functionality would be implemented here.');
+            toggleSignup();
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your inquiry! We will contact you shortly.');
+            this.reset();
+        });
+
+        // Review Functionality
+        const reviewStars = document.querySelectorAll('.review-star');
+        reviewStars.forEach(star => {
+            star.addEventListener('mouseover', function() {
+                const value = this.getAttribute('data-value');
+                highlightStars(value);
+            });
+            
+            star.addEventListener('click', function() {
+                const value = this.getAttribute('data-value');
+                document.getElementById('ratingValue').value = value;
+                highlightStars(value);
+            });
+            
+            star.addEventListener('mouseout', function() {
+                const selectedValue = document.getElementById('ratingValue').value;
+                highlightStars(selectedValue);
+            });
+        });
+
+        function highlightStars(value) {
+            reviewStars.forEach(star => {
+                const starValue = star.getAttribute('data-value');
+                if (starValue <= value) {
+                    star.classList.remove('bi-star');
+                    star.classList.add('bi-star-fill');
+                    star.classList.add('review-stars');
+                } else {
+                    star.classList.remove('bi-star-fill');
+                    star.classList.remove('review-stars');
+                    star.classList.add('bi-star');
+                }
+            });
+        }
+
+        document.getElementById('reviewForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const rating = document.getElementById('ratingValue').value;
+            if (rating == 0) {
+                alert('Please select a rating.');
+                return;
+            }
+            
+            alert('Thank you for your review! It will be published after moderation.');
+            this.reset();
+            highlightStars(0);
+            toggleReviewForm();
+        });
+
+        // Service Details
+        function showServiceDetails(serviceId) {
+            const modal = document.getElementById('serviceDetailsModal');
+            const content = document.getElementById('serviceDetailsContent');
+            
+            // Create object with service details
+            const services = {
+                'elderly-care': {
+                    title: 'Elderly Care Services',
+                    icon: 'bi-heart-pulse',
+                    description: 'Our Elderly Care services are designed to help seniors maintain their independence while receiving the support they need for daily living.',
+                    details: [
+                        'Personal care assistance (bathing, grooming, dressing)',
+                        'Medication management and reminders',
+                        'Meal planning and preparation',
+                        'Light housekeeping and laundry',
+                        'Companionship and emotional support',
+                        'Transportation to appointments and social activities',
+                        'Assistance with mobility and fall prevention'
+                    ],
+                    benefits: [
+                        'Maintain dignity and independence',
+                        'Reduce hospitalization risks',
+                        'Improve quality of life',
+                        'Peace of mind for family members'
+                    ],
+                    image: 'https://images.unsplash.com/photo-1631815588090-d1bcbe9a1e91?auto=format&fit=crop&q=80'
+                },
+                'post-surgery-care': {
+                    title: 'Post-Surgery Care',
+                    icon: 'bi-bandaid',
+                    description: 'Our specialized post-surgery care is designed to support a smooth recovery process in the comfort of your home.',
+                    details: [
+                        'Wound care and dressing changes',
+                        'Pain management assistance',
+                        'Mobility support and physical therapy assistance',
+                        'Medication administration and management',
+                        'Vital signs monitoring',
+                        'Nutrition planning for optimal recovery',
+                        'Transportation to follow-up appointments'
+                    ],
+                    benefits: [
+                        'Faster recovery in comfortable home environment',
+                        'Reduced risk of hospital readmission',
+                        'Personalized care focused on specific recovery needs',
+                        'Professional oversight of recovery progress'
+                    ],
+                    image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80'
+                },
+                // Add other services similarly...
+                'disability-care': {
+                    title: 'Disability Care Services',
+                    icon: 'bi-person-arms-up',
+                    description: 'Our disability care services are tailored to support individuals with physical, intellectual, or developmental disabilities, focusing on enhancing independence and quality of life.',
+                    details: [
+                        'Personal care and hygiene assistance',
+                        'Mobility and transfer support',
+                        'Meal preparation and feeding assistance if needed',
+                        'Medication management',
+                        'Accompaniment to medical appointments and social activities',
+                        'Household task assistance',
+                        'Community access and inclusion support'
+                    ],
+                    benefits: [
+                        'Promotes greater independence',
+                        'Enhances quality of life and wellbeing',
+                        'Facilitates community participation',
+                        'Provides respite and support for family caregivers'
+                    ],
+                    image: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&q=80'
+                },
+                'home-nursing': {
+                    title: 'Professional Home Nursing',
+                    icon: 'bi-clipboard2-pulse',
+                    description: 'Our home nursing services deliver professional medical care in the comfort and privacy of your home, administered by qualified healthcare professionals.',
+                    details: [
+                        'Skilled nursing assessments',
+                        'IV therapy and injections',
+                        'Wound care and dressing changes',
+                        'Catheter care and management',
+                        'Vital signs monitoring',
+                        'Complex medication administration',
+                        'Chronic disease management',
+                        'Coordination with doctors and healthcare providers'
+                    ],
+                    benefits: [
+                        'Receive professional medical care without hospitalization',
+                        'Personalized care plans developed for specific conditions',
+                        'Reduced exposure to hospital-acquired infections',
+                        'Comfortable healing environment'
+                    ],
+                    image: 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&q=80'
+                }
+            };
+            
+            // Get service details or show error
+            const service = services[serviceId] || {
+                title: 'Service Information',
+                icon: 'bi-info-circle',
+                description: 'Detailed information about this service will be available soon.',
+                details: ['Please contact us for more information about this service.'],
+                benefits: ['Personalized care plans', 'Professional care team'],
+                image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80'
+            };
+            
+            // Build HTML content
+            content.innerHTML = `
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full mr-3">
+                                <i class="bi ${service.icon} text-2xl text-blue-600"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold">${service.title}</h2>
+                        </div>
+                        
+                        <p class="text-gray-700 mb-6">${service.description}</p>
+                        
+                        <h3 class="font-semibold text-lg mb-3">Our Services Include:</h3>
+                        <ul class="space-y-2 mb-6">
+                            ${service.details.map(detail => `
+                                <li class="flex items-start">
+                                    <i class="bi bi-check-circle-fill text-blue-600 mr-2 mt-1"></i>
+                                    <span>${detail}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                        
+                        <h3 class="font-semibold text-lg mb-3">Benefits:</h3>
+                        <ul class="space-y-2 mb-6">
+                            ${service.benefits.map(benefit => `
+                                <li class="flex items-start">
+                                    <i class="bi bi-star-fill text-yellow-400 mr-2 mt-1"></i>
+                                    <span>${benefit}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                        
+                        <button onclick="scrollToContact(); closeServiceDetails();" class="mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+                            Request This Service
+                        </button>
+                    </div>
+                    
+                    <div class="h-64 md:h-auto rounded-lg overflow-hidden">
+                        <img src="${service.image}" alt="${service.title}" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            `;
+            
+            modal.classList.remove('hidden');
+        }
+
+        function closeServiceDetails() {
+            document.getElementById('serviceDetailsModal').classList.add('hidden');
+        }
+
+        // Active Navigation
+        const navLinks = document.querySelectorAll('.nav-link');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - 60)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Close modals when clicking outside
+        window.onclick = function(event) {
+            const modals = [
+                document.getElementById('loginModal'),
+                document.getElementById('signupModal'),
+                document.getElementById('reviewModal'),
+                document.getElementById('serviceDetailsModal')
+            ];
+            
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.classList.add('hidden');
+                }
+            });
+        };
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
